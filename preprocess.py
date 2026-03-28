@@ -9,6 +9,8 @@ print("Original shape:", df.shape)
 df = df.dropna()
 df = df.drop_duplicates()
 
+df['Age Group'] = pd.cut(df['Age'], bins=3, labels=['Young', 'Middle', 'Old'])
+
 le = LabelEncoder()
 df['Gender'] = le.fit_transform(df['Gender'])
 
@@ -22,7 +24,6 @@ pca_values = pca.fit_transform(df[cols])
 df['PCA1'] = pca_values[:, 0]
 df['PCA2'] = pca_values[:, 1]
 
-df['Age Group'] = pd.cut(df['Age'], bins=3, labels=['Young', 'Middle', 'Old'])
 
 df.to_csv("data_preprocessed.csv", index=False)
 
