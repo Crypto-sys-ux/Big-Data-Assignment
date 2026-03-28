@@ -3,9 +3,9 @@ import pandas as pd
 # Use RAW data instead
 df = pd.read_csv("data_raw.csv")
 
-avg_age = df['Age'].mean()
-max_income = df['Annual Income (k$)'].max()
-avg_score = df['Spending Score (1-100)'].mean()
+avg_age = round(df['Age'].mean())
+max_income = int(df['Annual Income (k$)'].max())
+avg_score = round(df['Spending Score (1-100)'].mean(), 1)
 
 with open("insight1.txt", "w") as f:
     f.write(f"Average age: {avg_age}")
