@@ -34,5 +34,8 @@ python ingest.py dataset.csv
 ## Notes
 All steps are executed automatically in sequence inside Docker.
 
+## Docker Hub
+https://hub.docker.com/r/r2a3d/customer-analytics
+
 ## Team Members
 (Shehab Hegazy)
