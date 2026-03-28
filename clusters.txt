@@ -1,3 +1,0 @@
-Cluster 2: 123 customers
-Cluster 1: 39 customers
-Cluster 0: 38 customers
