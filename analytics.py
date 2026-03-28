@@ -1,6 +1,7 @@
 import pandas as pd
 
-df = pd.read_csv("data_preprocessed.csv")
+# Use RAW data instead
+df = pd.read_csv("data_raw.csv")
 
 avg_age = df['Age'].mean()
 max_income = df['Annual Income (k$)'].max()
